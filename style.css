@@ -1,0 +1,406 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  background:#000;
+}
+
+.hero{
+  min-height:500px;
+  width:100%;
+  background-size:cover;
+  background-position:center;
+  position:relative;
+  overflow:hidden;
+  color:white;
+}
+
+/* Header */
+header{
+  position:relative;
+  z-index:2;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:24px;
+}
+
+nav a{
+  color:rgba(255,255,255,0.8);
+  text-decoration:none;
+  font-size:12px;
+  padding:8px 12px;
+  border-radius:20px;
+  transition:.2s;
+}
+
+nav a:hover{
+  color:white;
+  background:rgba(255,255,255,0.1);
+}
+
+.login-group{
+  position:relative;
+  display:flex;
+  align-items:center;
+}
+
+.login-btn{
+  padding:8px 24px;
+  border-radius:20px;
+  border:none;
+  background:white;
+  color:black;
+  font-size:12px;
+  cursor:pointer;
+  z-index:2;
+}
+
+.arrow-btn{
+  position:absolute;
+  right:0;
+  transform:translateX(-40px);
+  padding:8px 10px;
+  border-radius:50%;
+  border:none;
+  background:white;
+  cursor:pointer;
+  transition:.3s;
+  z-index:1;
+}
+
+.login-group:hover .arrow-btn{
+  transform:translateX(-70px);
+}
+
+/* Main */
+main{
+  position:absolute;
+  bottom:32px;
+  left:32px;
+  max-width:500px;
+  z-index:2;
+}
+
+.badge{
+  display:inline-block;
+  padding:6px 12px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter: blur(6px);
+  font-size:12px;
+  margin-bottom:16px;
+}
+
+h1{
+  font-size:56px;
+  line-height:1.1;
+  margin-bottom:16px;
+}
+
+.italic{
+  font-style:italic;
+}
+
+p{
+  font-size:12px;
+  color:rgba(255,255,255,0.7);
+  margin-bottom:16px;
+  line-height:1.6;
+}
+
+.buttons{
+  display:flex;
+  gap:16px;
+}
+
+.btn-outline{
+  padding:12px 32px;
+  border-radius:30px;
+  border:1px solid rgba(255,255,255,0.3);
+  background:transparent;
+  color:white;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.btn-outline:hover{
+  background:rgba(255,255,255,0.1);
+}
+
+.btn-fill{
+  padding:12px 32px;
+  border-radius:30px;
+  border:none;
+  background:white;
+  color:black;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.btn-fill:hover{
+  background:#eee;
+}
+
+.hidden-svg{
+  position:absolute;
+  width:0;
+  height:0;
+}
+.arrow-btn{
+  display:none;
+}
+
+.faq{
+  text-align:center;
+  font-size:36px;
+  padding-top:60px;
+  margin-bottom:10px;
+  color:white;
+}
+ 
+.pricing-title{
+  text-align:center;
+  font-size:36px;
+  margin-bottom:10px;
+  color:white;
+}
+
+.pricing-subtitle{
+  text-align:center;
+  font-size:14px;
+  color:rgba(255,255,255,0.6);
+  margin-bottom:50px;
+}
+
+.pricing-cards{
+  margin-top: 30px;
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+
+.pricing-root{
+  padding:40px 20px;
+}
+
+.pricing-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap:16px;
+  justify-content:center;
+}
+
+/* CARD */
+.pricing-card{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:16px;
+  padding:6px;
+  max-width:320px;
+}
+
+/* HEADER */
+.pricing-header{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:14px;
+  padding:16px;
+  margin-bottom:12px;
+}
+
+.plan{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:16px;
+}
+
+.plan-name{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-size:14px;
+  color:rgba(255,255,255,0.7);
+}
+
+.badge{
+  border:1px solid rgba(255,255,255,0.3);
+  border-radius:999px;
+  padding:2px 8px;
+  font-size:11px;
+  color:rgba(255,255,255,0.8);
+}
+
+/* PRICE */
+.price-row{
+  display:flex;
+  align-items:flex-end;
+  gap:6px;
+  margin-bottom:12px;
+}
+
+.main-price{
+  font-size:28px;
+  font-weight:800;
+  color:white;
+}
+
+.period{
+  font-size:13px;
+  color:rgba(255,255,255,0.6);
+  padding-bottom:4px;
+}
+
+.original-price{
+  margin-left:auto;
+  font-size:14px;
+  text-decoration:line-through;
+  color:rgba(255,255,255,0.4);
+}
+
+/* BUTTON */
+.pricing-btn{
+  width:100%;
+  height:40px;
+  border-radius:10px;
+  font-weight:600;
+  font-size:13px;
+  cursor:pointer;
+  border:none;
+}
+
+.pricing-btn.primary{
+  background:white;
+  color:black;
+}
+
+.pricing-btn.outline{
+  background:transparent;
+  color:white;
+  border:1px solid rgba(255,255,255,0.3);
+}
+
+/* BODY */
+.pricing-body{
+  padding:12px;
+}
+
+.desc{
+  font-size:12px;
+  color:rgba(255,255,255,0.6);
+  margin-bottom:14px;
+}
+
+.features{
+  list-style:none;
+}
+
+.features li{
+  display:flex;
+  gap:8px;
+  font-size:13px;
+  color:rgba(255,255,255,0.75);
+  margin-bottom:10px;
+}
+
+.features li::before{
+  content:"✔";
+  font-size:12px;
+  color:white;
+}
+.mns {
+  font-family: "Poppins", sans-serif;
+  padding: 5%;
+
+
+}
+/* From Uiverse.io by neerajbaniwal */ 
+.btn-shine {
+  text-align:center;
+  padding-bottom: 60px; /* المسافة تحت الفقرة */
+  transform: translate(-50%, -50%);
+  padding: 60px 30px;
+  color: #fff;
+  background: linear-gradient(to right, #9f9f9f 0, #fff 10%, #868686 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  white-space: nowrap;
+  font-family: "Poppins", sans-serif;
+}
+@-moz-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 360px;
+  }
+}
+@-webkit-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 360px;
+  }
+}
+@-o-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 360px;
+  }
+}
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 360px;
+  }
+}
+
+@media (max-width: 768px) {
+
+
+
+
+  .pricing-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card{
+    max-width:100%;
+  }
+
+  .btn-shine{
+    white-space: normal;
+    padding: 20px;
+  }
+}
